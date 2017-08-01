@@ -2,6 +2,7 @@ package com.bingerdranch.android.notes;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -20,8 +21,6 @@ import java.util.Map;
 
 public class MainActivity extends Activity {
 
-    String[] data = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"};
-
     private ArrayList<Object>list; // тут будут храниться все элементы - папки и текстовые документы
 
     private GridView gvMain; // поле, где находятся все эелемнты
@@ -29,6 +28,10 @@ public class MainActivity extends Activity {
 
     final String ATTRIBUTE_NAME_TEXT = "text";
     final String ATTRIBUTE_NAME_IMAGE = "image";
+
+    final String SAVED_TEXT = "saved_text";
+
+    private SharedPreferences sPref; // тут храним данные
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,5 +105,14 @@ public class MainActivity extends Activity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        Bundle b = new Bundle();
+        b.putSerializable(SAVED_TEXT,list);
+
+        super.onDestroy();
     }
 }

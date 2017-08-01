@@ -2,7 +2,6 @@ package com.bingerdranch.android.notes;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,21 +28,25 @@ public class EditText extends Activity {
         OK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnOk();
+                buttonOK();
             }
         });
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CancelBtn();
+                buttonCancel();
             }
         });
     }
 
-    private void btnOk() {
-
+    private void buttonOK() {
+        Intent intent = new Intent();
+        intent.putExtra("name",editText.getText().toString());
+        setResult(RESULT_OK,intent);
+        finish();
     }
-    private void CancelBtn() {
 
+    private void buttonCancel() {
+        finish();
     }
 }
