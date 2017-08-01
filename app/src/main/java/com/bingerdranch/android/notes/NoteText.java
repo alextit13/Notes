@@ -21,6 +21,7 @@ public class NoteText extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NoteText.this,EditText.class);
+                intent.putExtra("text",textView.getText().toString());
                 startActivity(intent);
             }
         });

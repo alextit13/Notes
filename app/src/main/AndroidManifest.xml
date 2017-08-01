@@ -19,7 +19,7 @@
         <activity android:name=".NoteText" />
         <activity android:name=".FolderContain" />
         <activity android:name=".EditText"
-            android:theme="@style/Animation.AppCompat.Dialog">
+            android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
     </application>
 
