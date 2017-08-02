@@ -1,17 +1,16 @@
 package com.bingerdranch.android.notes;
 
-
 import java.util.ArrayList;
 
-public class Folder{
+public class Folder {
     private String name;
-    private int image;
-    private ArrayList<Note>list;
+    private int imageFolder;
+    private ArrayList<Note>containNotes;
 
-    public Folder(String name, int image, ArrayList<Note> list) {
+    public Folder(String name, ArrayList<Note> containNotes) {
         this.name = name;
-        this.image = image;
-        this.list = list;
+        this.imageFolder = R.drawable.folder;
+        this.containNotes = containNotes;
     }
 
     public String getName() {
@@ -22,19 +21,19 @@ public class Folder{
         this.name = name;
     }
 
-    public int getImage() {
-        return image;
+    public int getImageFolder() {
+        return imageFolder;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setImageFolder(int imageFolder) {
+        this.imageFolder = imageFolder;
     }
 
-    public ArrayList<Note> getList() {
-        return list;
+    public ArrayList<Note> getContainNotes() {
+        return containNotes;
     }
 
-    public void setList(ArrayList<Note> list) {
-        this.list = list;
+    public void setContainNotes(ArrayList<Note> containNotes) {
+        this.containNotes = containNotes;
     }
 }

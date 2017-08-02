@@ -1,23 +1,13 @@
 package com.bingerdranch.android.notes;
 
-import android.media.Image;
+public class Note {
+    private String name;
+    private int imageNote;
+    private String text;
 
-public class Note{
-    private String text = "";
-    private String name = "";
-    private int image;
-
-    public Note(String text, String name, int image) {
-        this.text = text;
+    public Note(String name, String text) {
         this.name = name;
-        this.image = image;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
+        this.imageNote = R.drawable.note;
         this.text = text;
     }
 
@@ -29,11 +19,19 @@ public class Note{
         this.name = name;
     }
 
-    public int getImage() {
-        return image;
+    public int getImageNote() {
+        return imageNote;
     }
 
-    public void setImageView(int image) {
-        this.image = image;
+    public void setImageNote(int imageNote) {
+        this.imageNote = imageNote;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

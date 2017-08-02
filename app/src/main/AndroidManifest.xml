@@ -16,11 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NoteText" />
-        <activity android:name=".FolderContain" />
-        <activity android:name=".EditText"
-            android:theme="@style/Theme.AppCompat.Dialog">
-        </activity>
     </application>
 
 </manifest>
